@@ -1,0 +1,250 @@
+\documentclass[a4paper]{resume}
+
+\usepackage{bookmark}
+\usepackage{graphicx}
+\usepackage{paralist}
+\usepackage{multirow}
+\usepackage{marvosym}
+\usepackage[LGR, T1]{fontenc}
+\usepackage[english,greek]{babel}
+\usepackage[utf8x]{inputenc}
+
+% Modify document margins
+\usepackage[left=0.75in,top=0.6in,right=0.75in,bottom=0.6in]{geometry}
+\usepackage{hyperref}
+\hypersetup{
+  colorlinks=true,
+  urlcolor=blue
+}
+
+\usepackage[
+backend=bibtex,
+isbn=false,
+url=false,
+doi=false,
+abbreviate=false,
+giveninits=true
+]{biblatex}
+\addbibresource{bib/resume.bib}
+\addbibresource{bib/short-proceedings.bib}
+
+% Logo Commands
+\newcommand\githublogo{\raisebox{-1pt}{\includegraphics[height=9pt]{logos/github.pdf}}\ }
+\newcommand\linkedinlogo{\raisebox{-1pt}{\includegraphics[height=9pt]{logos/linkedin.pdf}}\ }
+\newcommand\emaillogo{\raisebox{-1pt}{\Letter}\ }
+\newcommand\homephonelogo{\raisebox{-1pt}{\Telefon}\ }
+\newcommand\cellphonelogo{\raisebox{-1pt}{\Mobilefone}\ }
+\newcommand*{\github}[1]{\githublogo\href{https://#1}{#1}}
+\newcommand*{\linkedin}[1]{\linkedinlogo\href{https://#1}{#1}}
+\newcommand*{\email}[1]{\emaillogo\href{mailto:#1}{\nolinkurl{#1}}}
+\newcommand*{\homephone}[1]{\homephonelogo{#1}}
+\newcommand*{\cellphone}[1]{\cellphonelogo{#1}}
+
+\newcommand{\tl}{\textlatin}
+%\newcommand{\greekVersion}{}
+\newcommand{\dual}[2]{\ifcsname greekVersion\endcsname #2\else\textlatin{#1}\fi}
+
+\newcommand{\diFull}{\dual
+{Ethnikon kai Kapodistriakon Panepistimion Athinon / University of Athens}
+{Εθνικόν και Καποδιστριακόν Πανεπιστήμιον Αθηνών / Πανεπιστήμιο Αθηνών} \\
+\dual
+{Department of Informatics \& Telecommunications}
+{Τμήμα Πληροφορικής \& Τηλεπικοινωνιών}}
+
+%-----------------------
+%   HEADER SECTION
+%-----------------------
+
+\name{\dual{Georgios ``George'' Kastrinis}{Γιώργος Καστρίνης} \diamond\;Curriculum Vit\ae}
+
+\address{%\dual{X St.}{Δρόμος Χ} \\
+%\dual{Argiroupoli (Athens 16452), Attica, Greece}{Αργυρούπολη (Αθήνα 16452), Αττική}
+\hfill{\tl{\email{gkastrinis@di.uoa.gr}}}}
+
+\address{%\homephone{+30 210 0000000} \hspace{0.2cm}
+%\cellphone{+30 697 000 0000}
+\hfill{\tl{\github{github.com/gkastrinis}}}}
+
+\address{\hfill{\tl{\linkedin{gr.linkedin.com/in/george-kastrinis-828b4743}}}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+\newcommand{\mytilde}{\raise.17ex\hbox{$\scriptstyle\mathtt{\sim}$}}
+\vspace{-1em}
+
+%------------------------------
+%     EDUCATION SECTION
+%------------------------------
+
+\begin{rSection}{\dual{Education}{Εκπαιδευση}}
+
+\dual
+{{\bf Doctor of Philosophy -- PhD,} Static Program Analysis \hfill {2012 -- (expected) Spring 2019}}
+{{\bf Διδακτορικό -- \tl{PhD},} Στατική Ανάλυση Προγραμμάτων \hfill {2012 -- (εκτιμάται) Άνοιξη 2019}} \\
+\diFull \\
+\dual{Advisor: Prof.~Yannis Smaragdakis}{Επιβλέπων Καθηγητής: Γιάννης Σμαραγδάκης}
+(\href{mailto:smaragd@di.uoa.gr}{\tl{\nolinkurl{smaragd@di.uoa.gr}}}) %\\
+%\dual
+%{Thesis: \emph{Scalable Static Pointer Analysis with High-Confidence Results}}
+%{Διατριβή: \emph{Αποδοτική Στατική Ανάλυση Δεικτών με Αξιόπιστα Αποτελέσματα}}
+
+\dual
+{{\bf Master of Science,} Advanced Information Systems \hfill {2009 -- 2012}}
+{{\bf Μεταπτυχιακό,} Προηγμένα Πληροφοριακά Συστήματα \hfill {2009 -- 2012}} \\
+\diFull \\
+\dual
+{Grade: $8.42 / 10$ ($\sim$ 3\% of graduating class)}
+{Μέσος Όρος: $8.42 / 10$ ($\sim$ 3\% της χρονιάς αποφοίτησης)}
+
+\dual
+{{\bf Bachelor of Science,} Computer Science \hfill {2005 -- 2009}}
+{{\bf Πτυχίο,} Επιστήμη Υπολογιστών \hfill {2005 -- 2009}} \\
+\diFull \\
+\dual
+{Grade: $8.33 / 10$ ($\sim$ 5\% of graduating class)}
+{Μέσος Όρος: $8.33 / 10$ ($\sim$ 5\% της χρονιάς αποφοίτησης)}
+
+\end{rSection}
+
+%------------------------------
+%   WORK EXPERIENCE SECTION
+%------------------------------
+
+\begin{rSection}{\dual{Experience}{Επαγγελματικη Εμπειρια}}
+
+\begin{rSubsection}
+  {\dual{University of Athens}{Πανεπιστήμιο ΑΘηνών}}
+  {\dual{January 2011 -- present}{Ιανουάριος 2011 -- παρόν}}
+  {\dual{Software Engineer, PLAST Lab}{Προγραμματιστής / Ερευνητής, \tl{PLAST Lab}}}
+  {\dual{Athens, Greece}{Αθήνα, Ελλάδα}}
+  \itemsep -0.5em
+\item[] \emph{\dual{Supervisor}{Επιβλέπων}}: \dual{Prof.~Yannis Smaragdakis}{Καθηγητής~Γιαννης Σμαραγδάκης}
+(\href{mailto:smaragd@di.uoa.gr}{\tl{\nolinkurl{smaragd@di.uoa.gr}}})
+\item[] \dual
+{\emph{Description}: Contributed to the development of the group's static analyses tools, more specifically the \textsc{Doop} framework, including implementing novel analyses as well as integrating the available analysis tools with a web application with the aim of showing static analysis results on the source code of the program.}
+{\emph{Περιγραφή}: Συμβολή στην ανάπτυξη των στατικών εργαλείων της ομάδας, και πιο συγκεκριμένα στο εργαλείο \tl{\textsc{Doop}}. Ανάπτυξη νέων αναλύσεων καθώς και σύνδεση των αποτελεσμάτων υπαρχόντων εργαλείων με διαδικτυακή εφαρμογή με σκοπό την παρουσίαση τους παράλληλα με τον πηγαίο κώδικα του προγράμματος.}
+\end{rSubsection}
+
+%------------------------------------------------
+
+\begin{rSubsection}
+  {\tl{Microsoft Research}}
+  {\dual{July 2014 -- October 2014}{Ιούλιος 2014 -- Οκτώβριος 2014}}
+  {\dual{Software Engineer Intern}{Πρακτική - Προγραμματιστής}}
+  {\tl{Redmond, WA, USA}}
+  \itemsep -0.5em
+\item[] \emph{\dual{Supervisor}{Επιβλέπων}}: \tl{Ben Livshits}
+(\href{mailto:livshits@microsoft.com}{\tl{\nolinkurl{livshits@microsoft.com}}})
+\item[] \dual
+{\emph{Description}: Contributed to the development of a platform utilizing Amazon's Mechanical Turk in order to offer a programmable API for creating surveys while taking into consideration a certain financial budget and/or time constraints.}
+{\emph{Περιγραφή}: Συμβολή στην ανάπτυξη πλατφόρμας, χρησιμοποιώντας και την υπηρεσία της \tl{Amazon - Mechanical Turk}, με σκοπό την υλοποίηση βιβλιοθήκης / προγραμματιστικού \tl{API} για τη δημιουργία διαδικτυακών δημοσκοπήσεων / ερευνών, παίρνοντας υπόψιν χρηματικούς και χρονικούς περιορισμούς.}
+\end{rSubsection}
+
+%------------------------------------------------
+
+\begin{rSubsection}
+  {\tl{LogicBlox, Inc}}
+  {\dual{May 2013 -- September 2013}{Μάιος 2013 -- Σεπτέμβριος 2013}}
+  {\dual{Software Engineer Intern}{Πρακτική - Προγραμματιστής}}
+  {\tl{Atlanta, GA, USA}}
+  \itemsep -0.5em
+\item[] \emph{\dual{Supervisor}{Επιβλέπων}}: \tl{Martin Bravenboer}
+(\href{mailto:martin.bravenboer@logicblox.com}{\tl{\nolinkurl{martin.bravenboer@logicblox.com}}})}
+\item[] \dual
+{\emph{Description}: Contributed to the development of a tool to integrate \textsc{CLANG} information to a static analysis framework expressed in Datalog.}
+{\emph{Περιγραφή}: Συμβολή στην ανάπτυξη εργαλείου για τη σύνδεση πληροφορίας από το εργαλέιο \tl{\textsc{CLANG}} με μία στατική ανάλυση προγραμμάτων εκφρασμένη στη γλώσσα προγραμματισμού \tl{Datalog}.}
+\end{rSubsection}
+
+%------------------------------------------------
+
+\begin{rSubsection}
+  {\dual{Network Operations Center, University of Athens}{Κέντρο Διαχείρησης Δικτύου (\tl{NOC}), Πανεπιστήμιο Αθηνών}}
+  {\dual{June 2009 -- January 2011}{Ιούνιος 2009 -- Ιανουάριος 2011}}
+  {\dual{Software Engineer}{Προγραμματιστής / Ερευνητής}}
+  {\dual{Athens, Greece}{Αθήνα, Ελλάδα}}
+  \itemsep -0.5em
+\item[] \dual
+{\emph{Description}: Developed and maintained various web services and platforms offered to University users by the Network Operations Center.}
+{\emph{Περιγραφή}: Ανάπτυξη και συντήρηση διάφορων υπηρεσιών και εργαλείων που προσφέρονται απο το Κέντρο στους χρήστες του Πανεπιστημίου.}
+\end{rSubsection}
+
+\end{rSection}
+
+%\newpage
+
+\begin{rSection}{\dual{Languages and Certificates}{Ξενες Γλωσσες}}
+  \dual{Greek (native), English (fluent), French (basic)}
+  {Ελληνικά (μητρική), Αγγλικά (υψηλό επίπεδο), Γαλλικά (βασικό επίπεδο)} \\
+  \selectlanguage{english}Certificate of Proficiency in English, University of Michigan (USA) \& University of Cambridge (UK) \\
+  DEFL A1-A6
+  \selectlanguage{greek}
+\end{rSection}
+
+%----------------------------------
+%   TECHNICAL STRENGTHS SECTION
+%----------------------------------
+
+\begin{rSection}{\dual{Technical Skills}{Τεχνικες Δεξιοτητες}}
+
+{\renewcommand{\arraystretch}{1.3}
+\begin{tabular}{ @{} >{\bfseries}l @{\hspace{6ex}} l }
+
+\dual{Programming Languages}{Γλώσσες Προγραμματισμού}
+   & \tl{C/C++, C\#, Java, Groovy, Python, Prolog, Datalog, Haskell} \\
+
+\dual{Build Tools}{\tl{Build Tools}}
+   & \tl{GNU Make, ANT, Gradle} \\
+
+\dual{Version Control}{\tl{Version Control}}
+   & \tl{Git, Mercurial, Subversion} \\
+
+\dual{Databases \& ORM}{Βάσεις Δεδομένων}
+   & \tl{SQL, MySQL, LogicBlox, SPARQL, OWL 2, LDAP, LINQ} \\
+
+\dual{Web Technologies}{Τεχνολογίες Διαδικτύου}
+   & \tl{HTML, CSS, Javascript, PHP, NodeJS} \\
+
+\dual{Misc}{Διάφορα}
+   & \tl{ANTLR 4, Vim, IntelliJ IDEA, Eclipse, GDB} \\
+\end{tabular}}
+\end{rSection}
+
+%---------------------------
+%   PUBLICATIONS SECTION
+%---------------------------
+
+\begin{rSection}{\dual{Publications}{Δημοσιευσεις}}
+  \selectlanguage{english}
+  \begin{rSubsection}{}{}{}{}
+    \itemsep -0.5em
+  \item \fullcite{soundmay}.
+  \item \fullcite{stringcoloring}.
+  \item \fullcite{proxies}.
+  \item \fullcite{mustaliasdata}.
+  \item \fullcite{mustaliasdatalog}.
+  \item \fullcite{reflection}.
+  \item \fullcite{introspective}.
+  \item \fullcite{setbased}.
+  \item \fullcite{hybrid}.
+  \item \fullcite{exceptions}.
+  \item \fullcite{localsearch}.
+  \end{rSubsection}
+  \selectlanguage{greek}
+\end{rSection}
+
+%-------------------------------------------
+%   EXTRA-CURRICULAR ACTIVITIES SECTION
+%-------------------------------------------
+
+\begin{rSection}{\dual{Activities}{Δραστηριοτητες}}
+  {\bf\dual{Teaching Assistant}{Υποστήριξη Μαθήματος}} \hfill {2009 -- \dual{present}{παρόν}} \\
+  \dual{University of Athens - Dept. of Informatics \& Telecommunications}
+  {Πανεπιστήμιο ΑΘηνών - Τμήμα Πληροφορικής \& Τηλεπικοινωνιών} \\
+  \dual{Courses: \emph{OOP, Advanced OOP, Systems Programming, Introduction to Programming}}
+  {Μαθήματα: \emph{\tl{OOP}, Προηγμένα Θέματα \tl{OOP}, Προγρ. Συστήματος, Εισαγωγή στον Προγραμματισμό}} \\
+  {\bf\tl{Google PhD Student Summit on Compilers}} \hfill {\dual{December}{Δεκέμβριος} 2016} \\
+  {\bf\tl{PLDI '15 Student Volunteer}} \hfill {\dual{June}{Ιούνιος} 2015} \\
+\end{rSection}
+
+\end{document}
