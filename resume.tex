@@ -41,8 +41,11 @@ giveninits=true
 \newcommand*{\cellphone}[1]{\cellphonelogo{#1}}
 
 \newcommand{\tl}{\textlatin}
-\newcommand{\greekVersion}{}
-\newcommand{\dual}[2]{\ifcsname greekVersion\endcsname #2\else\textlatin{#1}\fi}
+\newcommand{\dual}[2]{\tl{#1}} % English
+%\newcommand{\dual}[2]{#2} % Greek
+
+%\newcommand{\greekVersion}{}
+%\newcommand{\dual}[2]{\ifcsname greekVersion\endcsname #2\else\textlatin{#1}\fi}
 
 \newcommand{\diFull}{\dual
 {Ethnikon kai Kapodistriakon Panepistimion Athinon / University of Athens}
