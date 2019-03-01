@@ -1,8 +1,8 @@
 TEX = pdflatex -shell-escape -interaction=nonstopmode -file-line-error
 BIB = bibtex -min-crossrefs=9000
-PDF = $(addsuffix .pdf, resume)
+PDF = $(addsuffix .pdf, main)
 
-all: resume.pdf transcript.pdf
+all: main.pdf transcript.pdf
 
 $(PDF): %.pdf : %.tex
 	$(TEX) $<
