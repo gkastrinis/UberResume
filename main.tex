@@ -1,20 +1,22 @@
 \documentclass[a4paper]{resume}
 
+\usepackage[english,greek]{babel}
+\usepackage[backend=biber,bibencoding=ascii,style=numeric-comp,mincrossrefs=20]{biblatex}
 \usepackage{bookmark}
+\usepackage{csquotes}
 \usepackage{graphicx}
 \usepackage{paralist}
 \usepackage{multirow}
 \usepackage{marvosym}
 \usepackage[LGR, T1]{fontenc}
-\usepackage[english,greek]{babel}
-\usepackage[utf8x]{inputenc}
+\usepackage{textcomp}
 
 % Modify document margins
 \usepackage[left=0.75in,top=0.6in,right=0.75in,bottom=0.6in]{geometry}
 \usepackage{hyperref}
 \hypersetup{
-  colorlinks=true,
-  urlcolor=blue
+    colorlinks=true,
+    urlcolor=blue
 }
 
 \usepackage[
@@ -41,11 +43,10 @@ giveninits=true
 \newcommand*{\cellphone}[1]{\cellphonelogo{#1}}
 
 \newcommand{\tl}{\textlatin}
-\newcommand{\dual}[2]{\tl{#1}} % English
+%\newcommand{\dual}[2]{\tl{#1}} % English
 %\newcommand{\dual}[2]{#2} % Greek
-
 %\newcommand{\greekVersion}{}
-%\newcommand{\dual}[2]{\ifcsname greekVersion\endcsname #2\else\textlatin{#1}\fi}
+\newcommand{\dual}[2]{\ifcsname greekVersion\endcsname #2\else\textlatin{#1}\fi}
 
 \newcommand{\diFull}{\dual
 {Ethnikon kai Kapodistriakon Panepistimion Athinon / University of Athens}
@@ -58,7 +59,7 @@ giveninits=true
 %   HEADER SECTION
 %-----------------------
 
-\name{\dual{Georgios ``George'' Kastrinis}{Γιώργος Καστρίνης} \diamond\;Curriculum Vit\ae}
+\name{\dual{Georgios ``George'' Kastrinis}{Γιώργος Καστρίνης} \diamond\;Curriculum Vit$\ae$}
 
 \address{%\dual{X St.}{Δρόμος Χ} \\
 %\dual{Argiroupoli (Athens 16452), Attica, Greece}{Αργυρούπολη (Αθήνα 16452), Αττική}
@@ -83,14 +84,14 @@ giveninits=true
 \begin{rSection}{\dual{Education}{Εκπαιδευση}}
 
 \dual
-{{\bf Doctor of Philosophy -- PhD,} Static Program Analysis \hfill {2012 -- (expected) Spring 2019}}
-{{\bf Διδακτορικό -- \tl{PhD},} Στατική Ανάλυση Προγραμμάτων \hfill {2012 -- (εκτιμάται) Άνοιξη 2019}} \\
+{{\bf Doctor of Philosophy -- PhD,} Static Program Analysis \hfill {2012 -- 2020}}
+{{\bf Διδακτορικό -- \tl{PhD},} Στατική Ανάλυση Προγραμμάτων \hfill {2012 -- 2020}} \\
 \diFull \\
 \dual{Advisor: Prof.~Yannis Smaragdakis}{Επιβλέπων Καθηγητής: Γιάννης Σμαραγδάκης}
-(\href{mailto:smaragd@di.uoa.gr}{\tl{\nolinkurl{smaragd@di.uoa.gr}}}) %\\
-%\dual
-%{Thesis: \emph{Scalable Static Pointer Analysis with High-Confidence Results}}
-%{Διατριβή: \emph{Αποδοτική Στατική Ανάλυση Δεικτών με Αξιόπιστα Αποτελέσματα}}
+(\href{mailto:smaragd@di.uoa.gr}{\tl{\nolinkurl{smaragd@di.uoa.gr}}}) \\
+\dual
+{Thesis: \emph{Explorations in Static Pointer Analysis: Adaptive Scalability and Strong Guarantees}}
+{Διατριβή: \emph{Εξερευνώντας τον χώρο της Στατικής Ανάλυσης Δεικτών: Κλιμάκωση και Ισχυρές Εγγυήσεις}}
 
 \dual
 {{\bf Master of Science,} Advanced Information Systems \hfill {2009 -- 2012}}
@@ -241,7 +242,7 @@ giveninits=true
 %-------------------------------------------
 
 \begin{rSection}{\dual{Activities}{Δραστηριοτητες}}
-  {\bf\dual{Teaching Assistant}{Υποστήριξη Μαθήματος}} \hfill {2009 -- \dual{present}{παρόν}} \\
+  {\bf\dual{Teaching Assistant}{Υποστήριξη Μαθήματος}} \hfill {2009 -- \dual{2019}{2019}} \\
   \dual{University of Athens - Dept. of Informatics \& Telecommunications}
   {Πανεπιστήμιο ΑΘηνών - Τμήμα Πληροφορικής \& Τηλεπικοινωνιών} \\
   \dual{Courses: \emph{OOP, Advanced OOP, Systems Programming, Introduction to Programming}}
